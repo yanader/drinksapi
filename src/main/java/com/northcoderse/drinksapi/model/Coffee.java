@@ -2,15 +2,15 @@ package com.northcoderse.drinksapi.model;
 
 public class Coffee {
 
-    int id;
-    String name;
+    private long id;
+    private String name;
 
-    public Coffee(int id, String name) {
+    public Coffee(long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
