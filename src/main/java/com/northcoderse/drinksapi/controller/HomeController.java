@@ -19,6 +19,11 @@ public class HomeController {
         return "Welcome to the Drinks API!";
     }
 
+    @GetMapping(value="/health")
+    public String health() {
+        return "The drinks service is up and running";
+    }
+
     @GetMapping(value = "/coffeelover")
     public String coffee(){
         return "I like coffee!";

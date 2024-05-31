@@ -59,4 +59,13 @@ public class HomeControllerTests {
                 .andExpect(MockMvcResultMatchers.jsonPath("$.name").value(expectedValue));
     }
 
+    @Test public void healthCheck() throws Exception {
+        String expected = "The drinks service is up and running";
+
+        this.mockMvcController.perform(
+                MockMvcRequestBuilders.get("/health"))
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(MockMvcResultMatchers.content().string(expected));
+    }
+
 }
